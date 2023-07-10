@@ -30,7 +30,7 @@ DETAILS: dict[str, dict[str, str]] = {
     #     "pypi": "python-example",  # only needed if different from "project"
     #     "slug": "org/example",  # only needed if different from "{project}/{project}"
     # },
-    "Python JMAP": {
+    "python-jmap": {
         "slug": "boopmail/python-jmap",
     },
 }
