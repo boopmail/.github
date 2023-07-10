@@ -30,55 +30,14 @@ DETAILS: dict[str, dict[str, str]] = {
     #     "pypi": "python-example",  # only needed if different from "project"
     #     "slug": "org/example",  # only needed if different from "{project}/{project}"
     # },
-    "Pillow": {
-        "slug": "python-pillow/Pillow",
-    },
-    "pylast": {},
-    "pypistats": {
-        "slug": "hugovk/pypistats",
-    },
-    "pypinfo": {
-        "slug": "ofek/pypinfo",
-    },
-    "norwegianblue": {
-        "slug": "hugovk/norwegianblue",
-    },
-    "pepotron": {
-        "slug": "hugovk/pepotron",
-    },
-    "termcolor": {
-        "slug": "termcolor/termcolor",
-    },
-    "humanize": {
-        "slug": "python-humanize/humanize",
-    },
-    "PrettyTable": {
-        "slug": "jazzband/prettytable",
-    },
-    "Tablib": {
-        "slug": "jazzband/tablib",
-    },
-    "UltraJSON": {
-        "pypi": "ujson",
-        "slug": "ultrajson/ultrajson",
-    },
-    "OSMViz": {
-        "slug": "hugovk/osmviz",
-    },
-    "tinytext": {
-        "slug": "hugovk/tinytext",
-    },
-    "em-keyboard": {
-        "slug": "hugovk/em-keyboard",
-    },
-    "slacker-cli": {
-        "slug": "juanpabloaj/slacker-cli",
+    "Python JMAP": {
+        "slug": "boopmail/python-jmap",
     },
 }
 
 
 def update_readme(output: str) -> None:
-    with open("README.md") as f:
+    with open("profile/README.md") as f:
         contents = f.read()
 
     before, delim1, _ = contents.partition("[start_generated]: # (start_generated)\n")
@@ -89,7 +48,7 @@ def update_readme(output: str) -> None:
     if contents == new_contents:
         print("No changes to README.md")
     else:
-        with open("README.md", "w") as f:
+        with open("profile/README.md", "w") as f:
             f.write(new_contents)
         print("README.md updated")
 
